@@ -3,9 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Homepage from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import Homepage from './webpages/Home';
+import About from './webpages/About';
+import Contact from './webpages/Contact';
 
 function App() {
   return (
