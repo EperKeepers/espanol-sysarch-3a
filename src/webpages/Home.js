@@ -2,8 +2,21 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div>
-      <h1>Welcome to the home page!</h1>
+    <div className="container">
+      <div className="row justify-content-center mt-5">
+        <div className="col-md-8">
+          <div className="card">
+            <div className="card-header">
+              Welcome to My Website
+            </div>
+            <div className="card-body">
+              <h5 className="card-title">A simple and beautiful home page</h5>
+              <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla fringilla arcu ac laoreet. Morbi faucibus, dolor vel pretium suscipit, nisl tortor feugiat ex, ut eleifend enim sapien in nulla. Aliquam fermentum libero justo, vel facilisis leo ultricies vitae. </p>
+              <a href="#" className="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
