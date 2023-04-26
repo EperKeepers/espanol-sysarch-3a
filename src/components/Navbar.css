@@ -1,0 +1,45 @@
+:root {
+    --primary-100: #E4DCCF;
+    --primary-200: #F0EBE3;
+    --primary-300: #3F5B62;
+    --accent-100: #D69955;
+    --accent-200: #F8DAA8;
+    --text-100: #EEEEEE;
+    --text-200: #DCDCDC;
+    --bg-100: #576F72;
+    --bg-200: #7D9D9C;
+    --bg-300: #8CA9AA;
+  }
+  
+  .navbar {
+    background-color: var(--bg-200);
+    border-bottom: 2px solid var(--accent-100);
+  }
+  
+  .nav-link {
+    color: var(--text-100);
+  }
+  
+  .nav-link:hover {
+    color: var(--accent-100);
+  }
+  
+  .nav-item.active .nav-link {
+    color: var(--accent-100);
+  }
+  
+  .navbar-brand {
+    color: var(--primary-100);
+    font-weight: bold;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: var(--text-100);
+  }
+  
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      background-color: var(--bg-300);
+    }
+  }
+  
