@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../variables.css';
 
 const Register = () => {
   const [firstName, setFirstName] = useState('');
