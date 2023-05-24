@@ -1,25 +1,28 @@
 import React from 'react';
-import '../variables.css';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import ColoredLogo from '../assets/ColoredLogo.jpg';
 
-const Home = () => {
+const HomePage = () => {
+  const [output, setOutput] = useState(null); 
+
+  useEffect(() => {
+    axios.get('https://api.publicapis.org/entries')
+      .then(response => {
+        console.log(response.data.entries);
+        setOutput(response.data.entries);
+        // setOutput('aaahhhh') <- Remove this line, as it overwrites the previous value
+      });
+  }, []);
+
   return (
-    <div className="container">
-      <div className="row justify-content-center mt-5">
-        <div className="col-md-8">
-          <div className="card">
-            <div className="card-header">
-              Welcome to My Website
-            </div>
-            <div className="card-body">
-              <h5 className="card-title">A simple and beautiful home page</h5>
-              <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla fringilla arcu ac laoreet. Morbi faucibus, dolor vel pretium suscipit, nisl tortor feugiat ex, ut eleifend enim sapien in nulla. Aliquam fermentum libero justo, vel facilisis leo ultricies vitae. </p>
-              <a href="#" className="btn btn-primary">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div>
+      <center>
+        <h1>EperCreepers</h1>
+        <img src={ColoredLogo} />
+      </center>
     </div>
   );
 };
 
-export default Home;
+export default HomePage;
